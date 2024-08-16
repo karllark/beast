@@ -154,7 +154,7 @@ def pick_models_toothpick_style(
     counter = 0
     successes = 0
     include_mask = np.full(idxs.shape, True, dtype=bool)
-    chunksize = 100000
+    chunksize = 10000
     while True:
         counter += 1
         # pick some random models
@@ -185,7 +185,7 @@ def pick_models_toothpick_style(
             else:
                 # ... do not include this model again, since we will reject it
                 # anyway.
-                include_mask[idxs == rand_idx] = False
+                include_mask[idxs == rand_idx[r]] = False
 
         # Add the approved models
         chosen_idxs.extend(rand_idx[add_these])

@@ -91,7 +91,7 @@ def compute_distance_age_mass_metallicity_weights(
         dist_prior_weights /= np.sum(dist_prior_weights)
         dist_weights = dist_grid_weights * dist_prior_weights
 
-        # correct for any non-unformity in the number size of the
+        # correct for any non-uniformity in the number size of the
         # age-mass grids between metallicity points
         total_dist_grid_weight /= np.sum(total_dist_grid_weight)
         total_dist_prior_weight /= np.sum(total_dist_prior_weight)
