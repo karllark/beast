@@ -190,7 +190,8 @@ def reorder_beast_results_spatial(
 
                 # transfer the information
                 for cp_name, cp_value in cur_lnpfile["star_%d" % k].items():
-                    star_group.create_dataset(cp_name, data=cp_value.value)
+                    # star_group.create_dataset(cp_name, data=cp_value.value)
+                    star_group.create_dataset(cp_name, data=cp_value)
 
             reg_lnpfile.close()
 
